@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q01",
+    "question": "What reinforcement learning algorithm is used to train DeepSeek-R1-Zero?",
+    "answer": "DeepSeek-R1-Zero is trained using Group Relative Policy Optimization (GRPO).",
+    "source": "Section 2.2.1 Reinforcement Learning Algorithm",
+    "citation": ":contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "id": "q02",
+    "question": "Why does DeepSeek-R1-Zero avoid using neural reward models?",
+    "answer": "Because neural reward models may suffer from reward hacking during large-scale RL and require extra retraining, complicating the training pipeline.",
+    "source": "Section 2.2.2 Reward Modeling",
+    "citation": ":contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "id": "q03",
+    "question": "What two major types of rewards are used in DeepSeek-R1-Zero's rule-based reward system?",
+    "answer": "Accuracy rewards and format rewards.",
+    "source": "Section 2.2.2 Reward Modeling",
+    "citation": ":contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "id": "q04",
+    "question": "What template structure does DeepSeek-R1-Zero use during training?",
+    "answer": "It requires the model to output a reasoning process inside <think> tags followed by the final answer inside <answer> tags.",
+    "source": "Table 1 Training Template",
+    "citation": ":contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "id": "q05",
+    "question": "How does DeepSeek-R1-Zero's AIME 2024 pass@1 score change during RL training?",
+    "answer": "It improves from 15.6% to 71.0%.",
+    "source": "Section 2.2.4 Performance",
+    "citation": ":contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "id": "q06",
+    "question": "What is the pass@1 performance of DeepSeek-R1-Zero on the MATH-500 benchmark?",
+    "answer": "95.9%.",
+    "source": "Table 2 Benchmark Comparison",
+    "citation": ":contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "id": "q07",
+    "question": "What are two drawbacks of DeepSeek-R1-Zero mentioned in the paper?",
+    "answer": "Poor readability and language mixing.",
+    "source": "Drawback of DeepSeek-R1-Zero",
+    "citation": ":contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "id": "q08",
+    "question": "Why does DeepSeek-R1 introduce a cold-start dataset?",
+    "answer": "To prevent early instability in RL training and improve readability and coherence of the model's reasoning output.",
+    "source": "Section 2.3.1 Cold Start",
+    "citation": ":contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "id": "q09",
+    "question": "What format is used for DeepSeek-R1’s cold-start data?",
+    "answer": "The format is |special_token|<reasoning_process>|special_token|<summary>.",
+    "source": "Section 2.3.1 Cold Start",
+    "citation": ":contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "id": "q10",
+    "question": "What purpose does the language consistency reward serve in DeepSeek-R1?",
+    "answer": "It reduces language mixing and increases readability of the chain-of-thought.",
+    "source": "Section 2.3.2 Reasoning-oriented RL",
+    "citation": ":contentReference[oaicite:9]{index=9}"
+  },
+  {
+    "id": "q11",
+    "question": "What evaluation metric is calculated using multiple sampled responses with temperature 0.6 and top-p 0.95?",
+    "answer": "Pass@1.",
+    "source": "Evaluation Setup",
+    "citation": ":contentReference[oaicite:10]{index=10}"
+  },
+  {
+    "id": "q12",
+    "question": "What is the maximum generation length used for evaluating DeepSeek-R1?",
+    "answer": "32,768 tokens.",
+    "source": "Evaluation Setup",
+    "citation": ":contentReference[oaicite:11]{index=11}"
+  },
+  {
+    "id": "q13",
+    "question": "What is DeepSeek-R1’s pass@1 score on AIME 2024?",
+    "answer": "79.8%.",
+    "source": "Summary of Evaluation Results",
+    "citation": ":contentReference[oaicite:12]{index=12}"
+  },
+  {
+    "id": "q14",
+    "question": "What is DeepSeek-R1’s performance on MATH-500?",
+    "answer": "97.3% pass@1.",
+    "source": "Summary of Evaluation Results",
+    "citation": ":contentReference[oaicite:13]{index=13}"
+  },
+  {
+    "id": "q15",
+    "question": "How does DeepSeek-R1 perform on Codeforces?",
+    "answer": "It achieves a 2,029 Elo rating, outperforming 96.3% of human competitors.",
+    "source": "Summary of Evaluation Results",
+    "citation": ":contentReference[oaicite:14]{index=14}"
+  },
+  {
+    "id": "q16",
+    "question": "Which benchmarks show DeepSeek-R1 significantly outperforming DeepSeek-V3 in knowledge tasks?",
+    "answer": "MMLU (90.8%), MMLU-Pro (84.0%), and GPQA Diamond (71.5%).",
+    "source": "Knowledge Results",
+    "citation": ":contentReference[oaicite:15]{index=15}"
+  },
+  {
+    "id": "q17",
+    "question": "On which benchmark does DeepSeek-R1 exceed OpenAI-o1-mini but fall short of OpenAI-o1-1217?",
+    "answer": "GPQA Diamond.",
+    "source": "Knowledge Results",
+    "citation": ":contentReference[oaicite:16]{index=16}"
+  },
+  {
+    "id": "q18",
+    "question": "What is the purpose of rejection sampling in DeepSeek-R1’s training pipeline?",
+    "answer": "It is used to collect high-quality supervised fine-tuning (SFT) data after RL converges.",
+    "source": "Section 2.3.3 Rejection Sampling",
+    "citation": ":contentReference[oaicite:17]{index=17}"
+  },
+  {
+    "id": "q19",
+    "question": "What improvement does DeepSeek-R1-Distill-Qwen-32B achieve on MATH-500?",
+    "answer": "It scores 94.3%.",
+    "source": "Distilled Model Evaluation",
+    "citation": ":contentReference[oaicite:18]{index=18}"
+  },
+  {
+    "id": "q20",
+    "question": "Which tasks demonstrate DeepSeek-R1’s superiority in open-ended generation?",
+    "answer": "It achieves 87.6% win rate on AlpacaEval 2.0 and 92.3% on ArenaHard.",
+    "source": "Discussion of Evaluation Results",
+    "citation": ":contentReference[oaicite:19]{index=19}"
+  }
+]
