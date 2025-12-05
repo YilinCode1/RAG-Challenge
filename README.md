@@ -111,18 +111,6 @@ This notebook includes:
 * Tool usage examples
 * Memory & summarization demonstration
 
-# 5. Ground Truth Evaluation
-
-The file:
-
-```
-ground_truth.json
-```
-
-Contains 20 manually curated QA pairs used during development to evaluate retrieval accuracy.
-
-You can use this to measure precision, recall, or other IR evaluation metrics.
-
 # Final Report — DeepSeek RAG Challenge
 
 This repository contains my complete solution to the DeepSeek RAG Challenge.
